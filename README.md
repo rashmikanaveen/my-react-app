@@ -1,3 +1,16 @@
+## Cloning This Project
+
+To clone and run this existing project:
+
+```bash
+git clone https://github.com/rashmikanaveen/my-react-app.git
+cd my-react-app
+npm install
+npm run dev
+```
+
+---
+
 ## Creating a New Vite React App
 
 To create a new Vite React application, use the following command:
