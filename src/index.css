@@ -1,1 +1,109 @@
 @import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+
+:root {
+	--page-top: #fff7ea;
+	--page-bottom: #e5f2ff;
+	--card-bg: #ffffffcc;
+	--text-main: #1f2430;
+	--text-subtle: #5a6170;
+	--button-bg: #1744d2;
+	--button-hover: #1239b3;
+	--button-active: #0e2f95;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: 'Outfit', 'Segoe UI', Tahoma, sans-serif;
+	color: var(--text-main);
+	background: linear-gradient(165deg, var(--page-top), var(--page-bottom));
+}
+
+#root {
+	min-height: 100vh;
+}
+
+.app-shell {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	padding: 24px;
+}
+
+.config-card {
+	width: min(560px, 100%);
+	background: var(--card-bg);
+	backdrop-filter: blur(4px);
+	border: 1px solid #ffffff;
+	border-radius: 16px;
+	padding: 24px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.config-card h1 {
+	margin: 0 0 14px;
+	font-size: clamp(1.3rem, 1rem + 1.2vw, 1.9rem);
+}
+
+.button-row {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.btn {
+	border: 0;
+	border-radius: 10px;
+	padding: 10px 14px;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 500;
+	background: #edf1ff;
+	color: #163485;
+	transition: transform 140ms ease, background-color 140ms ease, color 140ms ease;
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+	background: #dfe7ff;
+}
+
+.btn.active {
+	background: var(--button-bg);
+	color: #fff;
+}
+
+.btn.active:hover {
+	background: var(--button-hover);
+}
+
+.btn:active {
+	transform: translateY(0);
+}
+
+.btn.active:active {
+	background: var(--button-active);
+}
+
+.config-details {
+	margin-top: 18px;
+	padding: 14px;
+	border: 1px solid #d8e6ff;
+	border-radius: 12px;
+	background: #f9fbff;
+}
+
+.config-details p {
+	margin: 8px 0;
+}
+
+.loading-text {
+	margin-top: 18px;
+	color: var(--text-subtle);
+}
